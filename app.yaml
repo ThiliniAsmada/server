@@ -1,0 +1,25 @@
+# # Put production environment variables here.
+# env_variables:
+# ...
+# FILESYSTEM_DRIVER: gcs
+# GOOGLE_CLOUD_PROJECT_ID: laravel-backend
+# GOOGLE_CLOUD_STORAGE_BUCKET: laravel-backend-bucket
+
+
+runtime: php
+env: flex
+
+runtime_config:
+  document_root: public
+
+# Ensure we skip ".env", which is only for local development
+skip_files:
+  - .env
+
+env_variables:
+  # Put production environment variables here.
+  APP_LOG: errorlog
+  APP_KEY: QzASjcxxXBEC1rWorHKnTvVFirGdnTBTz+gpUp2zvjE=
+  FILESYSTEM_DRIVER: gcs
+  GOOGLE_CLOUD_PROJECT_ID: laravel-backend
+  GOOGLE_CLOUD_STORAGE_BUCKET: https://console.cloud.google.com/storage/browser/laravel-backend.appspot.com
